@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface Prototype</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="highlight-within-textarea/jquery.highlight-within-textarea.css" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="highlight-within-textarea/jquery.highlight-within-textarea.js" crossorigin="anonymous"></script>
+<style>
+/* highlighting in textarea
+https://codersblock.com/blog/highlight-text-inside-a-textarea/
+https://lonekorean.github.io/highlight-within-textarea/
+*/
+mark {
+    border-radius: 3px;
+    background-color: #d0bfff;
+}
+mark.red {
+    background-color: #ffc9c9;
+}
+mark.blue {
+    background-color: #a3daff;
+}
+mark.yellow {
+    background-color: #ffecFF;
+}
+mark.orange {
+    background-color: #ffec99;
+}
+</style>
+</head>
+<body style="background-color:#191919;
+    background-position:top -100px;
+    background-repeat:no-repeat;
+    background-image:url(./background4.png);
+    ">
+
+<div class="container" style="height:2000px;width:400px;float:right;
+    background-color:#F2F2F2;border-left:1px solid #FFFFFF">
+
+    <div style="padding-top:1rem">
+
+        <form>
+
+        <h5>Add your theory</h5>
+
+        <div style="float:right;cursor:pointer;">
+            <img src="bootstrap-icons-1.0.0-alpha5/file-minus.svg" alt="remove" />
+        </div>
+
+        <h7 style="font-weight:bold;">Shoshana Zuboff on surveillance capitalism ...</h7>
+
+        <div class="input-group mb-3">
+            <div style="position: relative;overflow:hidden;cursor:pointer;">
+                <img src="https://i.ytimg.com/vi/hIXhnWUmMvw/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDm8H4NGWoOIEBtcIdvl1Kgcuh2PA" alt="" width="360" height="200" style="
+                filter: blur(10px);
+                -webkit-filter: blur(10px);
+                -moz-filter: blur(10px);
+                -o-filter: blur(10px);
+                -ms-filter: blur(10px);
+                " />
+            </div>
+        </div>
+
+        <!--
+        <h6>Enter your Theory</h6>
+        -->
+
+        <div class="input-group mb-3">
+            <h6><b>Why was this video was recommended to you?</b></h6>
+            <textarea
+                class="highlighted form-control"
+                rows="3"
+                style="width:360px;"
+                placeholder="Enter your theory..."
+            >The video was recommended because I searched for the topic surveillance capitalism</textarea>
+
+            <small id="passwordHelpInline" class="text-muted">
+              Detected as &lt;topic-search&gt; theory.
+              <img src="bootstrap-icons-1.0.0-alpha5/info-circle.svg" title="Some help text here" style="height:.8rem" alt="more info" />
+            </small>
+
+        </div>
+
+        <div>
+          <label for="formControlRange"><b>How confident are you in this theory?</b></label>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <span class="mr-3 mt-0">Not&nbsp;At&nbsp;All</span>
+          <input type="range" min="0" max="100"
+                class="custom-range border-0 mt-1" id="formControlRange" />
+          <span class="ml-3 mt-0">Extremely</span>
+        </div>
+
+        <div style="float:right">
+            <button type="button" class="btn btn-dark">Submit</button>
+        </div>
+
+        <div  style="float:left">
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Assign to theory 
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Enter new theory</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+        </div>
+
+        </form>
+
+        <div style="clear:both"></div>
+
+    </div>
+
+    <hr />
+
+    <div>
+
+        <h6><b>Your Theories</b></h6>
+
+
+<div class="card" style="width: 100%;margin-bottom:.5rem;">
+  <div class="card-body">
+    <p class="card-text">
+        Because I liked Shoshana Zuboff's videos.
+    </p>
+    <h6 class="card-subtitle mb-2 text-muted">&lt;like&gt; theory
+      <img src="bootstrap-icons-1.0.0-alpha5/trash.svg" alt="remove" style="margin-top:0;padding-top:0;height:1rem;float:right;" />
+    </h6>
+  </div>
+</div>
+
+<div class="card" style="width: 100%;margin-bottom:.5rem;">
+  <div class="card-body">
+    <p class="card-text">
+                Cras sit amet nibh libero, in gravida nulla.
+        <!--
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        -->
+    </p>
+    <h6 class="card-subtitle mb-2 text-muted">&lt;unknown&gt; theory
+      <img src="bootstrap-icons-1.0.0-alpha5/trash.svg" alt="remove" style="margin-top:0;padding-top:0;height:1rem;float:right;" />
+    </h6>
+  </div>
+</div>
+
+<div class="card" style="width: 100%;margin-bottom:.5rem;">
+  <div class="card-body">
+    <p class="card-text">
+        Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </p>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle
+      <img src="bootstrap-icons-1.0.0-alpha5/trash.svg" alt="remove" style="margin-top:0;padding-top:0;height:1rem;float:right;" />
+    </h6>
+  </div>
+</div>
+
+
+<!--
+<ul class="list-unstyled">
+  <li class="media">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">
+          <img style="float:right;padding-top:.5rem" src="bootstrap-icons-1.0.0-alpha5/trash.svg" alt="remove" />
+          List-based media object
+      </h5>
+      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+  </li>
+  <li class="media my-4">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">
+        <img style="float:right;padding-top:.5rem" src="bootstrap-icons-1.0.0-alpha5/trash.svg" alt="remove" />
+        List-based media object
+      </h5>
+      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+  </li>
+  <li class="media">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">
+        <img style="float:right;padding-top:.5rem" src="bootstrap-icons-1.0.0-alpha5/trash.svg" alt="remove" />
+        List-based media object
+      </h5>
+      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+  </li>
+</ul>
+-->
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+$('.highlighted').highlightWithinTextarea({
+    highlight: [
+        {
+            highlight: 'topic',
+            className: 'red'
+        },
+        {
+            highlight: 'surveillance capitalism',
+            className: 'red'
+        },
+        {
+            highlight: 'searched',
+            className: 'orange'
+        },
+        {
+            highlight: 'video',
+            className: 'blue',
+        },
+        {
+            highlight: 'recommended',
+            className: 'yellow',
+        }
+    ]
+});
+</script>
+
+</body>
+</html>
